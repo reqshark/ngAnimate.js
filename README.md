@@ -1,20 +1,20 @@
 ngAnimate.js
 ============
 
-AngularJS ngAnimate source code
+#### AngularJS ngAnimate source code
+#### @ngdoc module
+#### @name ngAnimate
+#### @description
 
-
-
-@ngdoc module
-@name ngAnimate
-@description
 The `ngAnimate` module provides support for JavaScript, CSS3 transition and CSS3 keyframe animation hooks within existing core and custom directives.
 `<div doc-module-components="ngAnimate"></div>`
 # Usage
 To see animations in action, all that is required is to define the appropriate CSS classes
-or to register a JavaScript animation via the myModule.animation() function. The directives that support animation automatically are:
-`ngRepeat`, `ngInclude`, `ngIf`, `ngSwitch`, `ngShow`, `ngHide`, `ngView` and `ngClass`. Custom directives can take advantage of animation
-by using the `$animate` service.
+or to register a JavaScript animation via the `myModule.animation()` function. The directives that support animation automatically are:
+`ngRepeat`, `ngInclude`, `ngIf`, `ngSwitch`, `ngShow`, `ngHide`, `ngView` and `ngClass`. 
+
+Custom directives can take advantage of animation by using the `$animate` service. 
+
 Below is a more detailed breakdown of the supported animation events provided by pre-existing ng directives:
 
 
@@ -248,3 +248,16 @@ As explained above, these callbacks are triggered based on the animation event. 
 
 
 `angular.module('ngAnimate', ['ng'])`
+
+# $animateProvider
+
+#### @ngdoc provider
+#### @name $animateProvider
+#### @description
+
+The `$animateProvider` allows developers to register JavaScript animation event handlers directly inside of a module. 
+
+When an animation is triggered, the $animate service will query the $animate service to find any animations that match the provided name value.
+
+Requires the `ngAnimate` module to be installed. Please visit the `ngAnimate` [module overview page to learn more](http://docs.angularjs.org/api/ngAnimate/service/$animate) about how to use animations in your application.
+
